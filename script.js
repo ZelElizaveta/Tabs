@@ -24,7 +24,8 @@ window.addEventListener('DOMContentLoaded', function() {                //Наз
     info.addEventListener('click', function(event) {                    // назначаем обработчик событий на родителя tabContent 
         let target = event.target;
         if (target && target.classList.contains('info-header-tab')) {       //проверяем действительно ли мы нажали на tabContent, а не на его родителя info
-            for(let i = 0; i < tab.length; i++) {                           // и запускаем цикл, который будет сравнивать  target и номер tabContent                                                 if (target == tab[i]) {
+            for(let i = 0; i < tab.length; i++) {
+                   if (target == tab[i]) {                                // и запускаем цикл, который будет сравнивать  target и номер tabContent                                                
                     hideTabContent(0);                                    //скрываем все Табы
                     showTabContent(i);                                   //показывает необходимый нам Таб           
                     break;
